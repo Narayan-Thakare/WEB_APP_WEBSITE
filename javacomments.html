@@ -267,70 +267,114 @@
 </style>
 
 
-
-<div class="w3-col l10 m12" id="main" style="margin: 10 auto; text-align: center;">
+<div class="w3-col l10 m12" id="main">
     <div id="mainLeaderboard" style="overflow:hidden;">
       <!-- MainLeaderboard-->
 
       <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="CLbxzPnM1IEDFTxXnQkd7ioEig"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"></iframe></div></div>
+      <div id="adngin-main_leaderboard-0" data-google-query-id="CMWG4_bn1IEDFdlJnQkdRuAJlQ"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="3"></iframe></div></div>
       <!-- adspace leaderboard -->
 
     </div>
 
-<h1>Java <span class="color_h1">Introduction</span></h1>
+<h1>Java <span class="color_h1">Comments</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="index.html">❮ Previous</a>
-<a class="w3-right w3-btn" href="javasyntax.html">Next ❯</a>
+<a class="w3-left w3-btn" href="java_output_numbers.asp">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_variables.asp">Next ❯</a>
 </div>
 <hr>
 
-<h2>What is Java?</h2>
-<p>Java is a popular programming language, created in 1995.</p>
-<p>It is owned by Oracle, and more than <strong>3 billion</strong> devices run Java.</p>
-<p>It is used for:</p>
+<h2>Java Comments</h2>
 
-<ul>
-<li>Mobile applications (specially Android apps)</li>
-<li>Desktop applications</li>
-<li>Web applications</li>
-<li>Web servers and application servers</li>
-<li>Games</li>
-<li>Database connection</li>
-<li>And much, much more!</li>
-</ul>
+<p>Comments can be used to explain Java code, and to make it more readable. It can also be used to 
+prevent execution when testing alternative code.</p>
 <hr>
 
-<h2>Why Use Java?</h2>
-<ul>
-<li>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)</li>
-<li>It is one of the most popular programming language in the world</li>
-<li>It has a large demand in the current job market</li>
-<li>It is easy to learn and simple to use</li>
-<li>It is open-source and free</li>
-<li>It is secure, fast and powerful</li>
-<li>It has a huge community support (tens of millions of developers)</li>
-<li>Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs</li>
-<li>As Java is close to <a href="/cpp/default.asp">C++</a> and <a href="/cs/default.asp">C#</a>, it makes it easy for programmers to switch to Java or vice versa</li>
-</ul>
-<hr>
-<h2>Get Started</h2>
-<p>It is not necessary to have any prior programming experience.</p>
-<a class="ws-btn ws-grey ws-hover-black" href="java_getstarted.asp">Get Started »</a>
+<h2>Single-line Comments</h2>
+<p>Single-line comments start with two forward slashes (<code class="w3-codespan">//</code>).</p>
+<p>Any text between <code class="w3-codespan">//</code> and the end of the line 
+is ignored by Java (will not be executed).</p>
+<p>This example uses a single-line comment before a line of code:</p>
+
+<div class="w3-example">
+<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token comment">// This is a comment</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>
+<a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_single_comment">Try it Yourself »</a>
+</p></div>
+
+<p>This example uses a single-line comment at the end of a line of code:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// This is a comment</span>
+</code></pre>
+<p>
+<a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_single_comment_end">Try it Yourself »</a>
+</p></div>
 
 <hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+<div id="adngin-mid_content-0" data-google-query-id="CMSG4_bn1IEDFdlJnQkdRuAJlQ"><div id="sn_ad_label_adngin-mid_content-0" class="sn_ad_label" style="color:#000000;font-size:12px;margin:0;text-align:center;">ADVERTISEMENT</div><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0" title="3rd party ad content" width="336" height="280" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="2"></iframe></div></div>
+
+</div>
+<hr>
+<h2>Java Multi-line Comments</h2>
+
+<p>Multi-line comments start with <code class="w3-codespan">/*</code> and ends with <code class="w3-codespan">*/</code>.</p>
+
+<p>Any text between <code class="w3-codespan">/*</code> and <code class="w3-codespan">*/</code> will be ignored by Java.</p>
+
+<p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token comment">/* The code below will print the words Hello World
+to the screen, and it is amazing */</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>
+<a target="_blank" class="w3-btn" href="tryjava.asp?filename=demo_multi_comment">Try it Yourself »</a>
+</p></div>
+
+<div class="w3-note w3-panel">
+<h4>Single or multi-line comments?</h4>
+<p>It is up to you which you want to use. Normally, we use <code class="w3-codespan">//</code> for short comments, and <code class="w3-codespan">/* */</code> for longer.</p>
+</div>
+
+<hr>
+
+<div>
+<form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="exercise.asp?filename=exercise_syntax2" method="post" target="_blank">
+<h2>Test Yourself With Exercises</h2>
+<div class="exercisewindow">
+<h2>Exercise:</h2>
+<p>Insert the missing part to create two types of comments.</p>
+<div class="exerciseprecontainer">
+<pre style="overflow: auto;"><input name="ex1" maxlength="2" style="width: 25px;"> This is a single-line comment
+<input name="ex2" maxlength="2" style="width: 25px;"> This is a multi-line comment <input name="ex3" maxlength="2" style="width: 25px;">
+</pre>
+</div>
+<br>
+<button type="submit" class="w3-btn w3-margin-bottom">Submit Answer »</button>
+<p><a target="_blank" href="exercise.asp?filename=exercise_syntax2">Start the Exercise</a></p>
+</div>
+</form>
+</div>
+<hr>
+
+<br>
 <div class="w3-clear nextprev w3-center">
-<a class="w3-left w3-btn" href="index.html">❮ Previous</a><a class="w3-btn w3-hide-small myl-nav-butt" href="https://www.w3schools.com/signup/?utm_source=classic&amp;utm_medium=java_tutorial&amp;utm_campaign=button_lower_navigation" title="Sign Up and improve Your Learning Experience" target="_blank">Log in to track progress</a>
-<a class="w3-right w3-btn" href="javasyntax.html">Next ❯</a>
-</div>
-<div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
-
+<a class="w3-left w3-btn" href="java_output_numbers.asp">❮ Previous</a><a class="w3-btn w3-hide-small myl-nav-butt" href="https://www.w3schools.com/signup/?utm_source=classic&amp;utm_medium=java_tutorial&amp;utm_campaign=button_lower_navigation" title="Sign Up and improve Your Learning Experience" target="_blank">Log in to track progress</a>
+<a class="w3-right w3-btn" href="java_variables.asp">Next ❯</a>
 </div>
 
 </div>
-
-
-
 
 
 <!-- ///////////////////////////////////////////// -->
