@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Asterisc</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <!-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div> -->
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-secondary navbar-dark">
+                <a href="/index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Asterisc</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <!-- <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jhon Doe</h6>
+                        <span>Admin</span>
+                    </div> -->
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="/index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Home</a>
+                    <div class="nav-item dropdown">
+                       
+
+                                            <!-- <a href="chart.html" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Elements</a> -->
+
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">Buttons</a>
+                            <a href="typography.html" class="dropdown-item">Typography</a>
+                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                        </div>
+                    </div>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+
+                    <!-- <a href="chart.html" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Elements</a>
+                    <div class="nav-item dropdown"> -->
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signin.html" class="dropdown-item">Sign In</a>
+                            <a href="signup.html" class="dropdown-item">Sign Up</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                 <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- <form class="d-none d-md-flex ms-4">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+                </form> -->
+                <!-- <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New user added</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Password changed</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">John Doe</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div> -->
+            </nav>
+            <!-- Navbar End -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Set the background to black */
+        color: #fff; /* Set text color to white */
+    }
+
+    #main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #111; /* Set content background color to dark gray */
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Add a subtle shadow */
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #007bff; /* Blue color */
+    }
+
+    .color_h1 {
+        color: #ff6600; /* Orange color */
+    }
+
+    hr {
+        border: 1px solid #333; /* Dark gray border for HR */
+        margin: 20px 0; /* Add margin to the HR */
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #fff; /* White text color for headings */
+    }
+
+    p {
+        font-size: 18px;
+        color: #ddd; /* Light gray text color for paragraphs */
+        text-align: left; /* Align paragraphs to the left */
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        text-align: left; /* Align lists to the left */
+    }
+
+    li {
+        font-size: 18px;
+        color: #ddd; /* Light gray text color for list items */
+        text-align: left; /* Align list items to the left */
+    }
+
+    .w3-clear {
+        clear: both;
+    }
+
+    .nextprev {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .w3-btn {
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .w3-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="w3-col l10 m12" id="main">
+    <div id="mainLeaderboard" style="overflow:hidden;">
+      <!-- MainLeaderboard-->
+      
+      <div id="div-gpt-ad-1422003450156-2" data-google-query-id="CPPXmuul5oEDFW2jZgIdgy0AzA">
+        <script type="text/javascript">uic_r_f();</script>
+      <div id="google_ads_iframe_/16833175/MainLeaderboard_0__container__" style="border: 0pt; width: 728px; height: 0px;"></div></div>
+
+    </div>
+
+<h1>Java <span class="color_h1">Inner Classes</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="java_polymorphism.asp">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_abstract.asp">Next ❯</a>
+</div>
+<hr>
+
+<h2>Java Inner Classes</h2>
+<p>In Java, it is also possible to nest classes (a class within a class). The purpose 
+of nested classes is to group classes that belong together, which makes your code more readable and maintainable.</p>
+<p>To access the inner class, create an object of the outer class, and then create an object of the inner class:</p>
+<div class="w3-example">
+<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
+<pre class="w3-white language-java" data-line="4" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">OuterClass</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">InnerClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-int">int</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">OuterClass</span> myOuter <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">OuterClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">OuterClass<span class="token punctuation">.</span>InnerClass</span> myInner <span class="token operator">=</span> myOuter<span class="token punctuation">.</span><span class="token keyword keyword-new">new</span> <span class="token class-name">InnerClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myInner<span class="token punctuation">.</span>y <span class="token operator">+</span> myOuter<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Outputs 15 (5 + 10)</span>
+<div aria-hidden="true" data-range="4" class=" line-highlight" data-start="4" style="top: 67.5px; width: 1028px;"> 
+</div></code></pre>
+<p>
+</p>
+</div>
+<hr>
+
+<h2>Private Inner Class</h2>
+<p>Unlike a "regular" class, an inner class can be <code class="w3-codespan">private</code> or <code class="w3-codespan">protected</code>. 
+If you don't want outside objects to access the inner class, declare 
+the class as <code class="w3-codespan">private</code>:</p>
+<!--<p>In the 
+following example we declare the inner class as private, meaning it cannot be 
+accessed from an object <strong>outside the class</strong>:</p>-->
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" data-line="4" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">OuterClass</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-private"><strong>private</strong></span> <span class="token keyword keyword-class">class</span> <span class="token class-name">InnerClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-int">int</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">OuterClass</span> myOuter <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">OuterClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">OuterClass<span class="token punctuation">.</span>InnerClass</span> myInner <span class="token operator">=</span> myOuter<span class="token punctuation">.</span><span class="token keyword keyword-new">new</span> <span class="token class-name">InnerClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myInner<span class="token punctuation">.</span>y <span class="token operator">+</span> myOuter<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<div aria-hidden="true" data-range="4" class=" line-highlight" data-start="4" style="top: 67.5px; width: 1028px;"> 
+</div></code></pre>
+<p>If you try to access a private inner class from an outside class, an error occurs:</p>
+<div class="w3-padding notranslate w3-black w3-margin-top">
+<code>
+Main.java:13: error: OuterClass.InnerClass has private access in OuterClass<br>
+&nbsp;&nbsp;&nbsp;&nbsp;OuterClass.InnerClass myInner = myOuter.new InnerClass();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
+</code>
+</div>
+<p>
+</p>
+</div>
+
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+      
+
+
+<h2>Static Inner Class</h2>
+<p>An inner class can also be <code class="w3-codespan">static</code>, which means that you can access it without 
+creating an object of the outer class:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" data-line="4" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">OuterClass</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-static">static</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">InnerClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-int">int</span> y <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">OuterClass<span class="token punctuation">.</span>InnerClass</span> myInner <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">OuterClass<span class="token punctuation">.</span>InnerClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myInner<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Outputs 5</span>
+<div aria-hidden="true" data-range="4" class=" line-highlight" data-start="4" style="top: 67.5px; width: 1028px;"> 
+</div></code></pre>
+<p>
+</p>
+</div>
+<div class="w3-note w3-panel">
+<p><strong>Note:</strong> just like <code class="w3-codespan">static</code> attributes and methods, a <code class="w3-codespan">static</code> inner class does not have access to members of the outer class.</p>
+</div>
+<hr>
+
+<h2>Access Outer Class From Inner Class</h2>
+
+<p>One advantage of inner classes, is that they can access attributes and methods of the outer class:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">OuterClass</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">InnerClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">myInnerMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> x<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">OuterClass</span> myOuter <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">OuterClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">OuterClass<span class="token punctuation">.</span>InnerClass</span> myInner <span class="token operator">=</span> myOuter<span class="token punctuation">.</span><span class="token keyword keyword-new">new</span> <span class="token class-name">InnerClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myInner<span class="token punctuation">.</span><span class="token function">myInnerMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Outputs 10</span>
+</code></pre>
+<p>
+</p>
+</div>
+
+
+<br>
+<div class="w3-clear nextprev w3-center">
+<a class="w3-left w3-btn" href="java_polymorphism.asp">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_abstract.asp">Next ❯</a>
+</div>
+<div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
+<a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
+ 
+  
+</a>
+</div>
+
+</div>
+<!-- ///////////////////////////////////////////// -->
+
+            <!-- Chart Start -->
+          
+            </div>
+            <!-- Chart End -->
+
+
+            <!-- Footer Start -->
+            
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/chart/chart.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
