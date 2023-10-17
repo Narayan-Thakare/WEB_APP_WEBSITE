@@ -267,154 +267,336 @@
 </style>
 
 <div class="w3-col l10 m12" id="main">
-    <div id="mainLeaderboard" style="overflow:hidden;">
-      <!-- MainLeaderboard-->
+      <div id="mainLeaderboard" style="overflow:hidden;">
+        <!-- MainLeaderboard-->
 
-      <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="CKLYgPqT-IEDFXypZgIdmGQMlA"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="970" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="3" data-load-complete="true"></iframe></div></div>
-      <!-- adspace leaderboard -->
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="adngin-main_leaderboard-0" data-google-query-id="COWuz67Y_YEDFWJHnQkdc4oKhA"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="3"></iframe></div></div>
+        <!-- adspace leaderboard -->
 
-    </div>
+      </div>
 
-<h1>Java <span class="color_h1">Enums</span></h1>
+<h1>Java <span class="color_h1">Date and Time</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="java_interface.asp">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_user_input.asp">Next ❯</a>
+<a class="w3-left w3-btn" href="java_user_input.asp">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_arraylist.asp">Next ❯</a>
 </div>
 <hr>
 
-<h2>Enums</h2>
-<p>An <code class="w3-codespan">enum</code> is a special "class" that represents a group of 
-<strong>constants</strong> (unchangeable variables, like <code class="w3-codespan">final</code> variables).</p>
-<p>To create an <code class="w3-codespan">enum</code>, use the <code class="w3-codespan">enum</code> keyword (instead of class or interface), and separate 
-the constants with a comma. Note that they should be in uppercase letters:</p>
+<h2>Java Dates</h2>
+<p>Java does not have a built-in Date class, but we can import the <code class="w3-codespan">java.time</code> 
+package to work with the date and time API. The package includes many date and time classes. 
+For example:</p>
+<div class="w3-responsive" style="margin:-16px 0;">
+<table class="ws-table-all notranslate">
+<tbody>
+<tr>
+<th style="width:25%">Class</th>
+<th style="width:75%">Description</th>
+</tr>
+<tr>
+<td><code class="w3-codespan">LocalDate</code></td>
+<td>Represents a date (year, month, day (yyyy-MM-dd))</td>
+<!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_localdate">Try it &raquo;</a></td>-->
+</tr>
+<tr>
+<td><code class="w3-codespan">LocalTime</code></td>
+<td>Represents a time (hour, minute, second and nanoseconds (HH-mm-ss-ns))</td>
+<!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_localtime">Try it &raquo;</a></td>-->
+</tr>
+<tr>
+<td><code class="w3-codespan">LocalDateTime</code></td>
+<td>Represents both a date and a time (yyyy-MM-dd-HH-mm-ss-ns)</td>
+<!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+</tr>
+<tr>
+<td><code class="w3-codespan">DateTimeFormatter</code></td>
+<td>Formatter for displaying and parsing date-time objects</td>
+<!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+</tr>
+</tbody>
+</table>
+</div>
+<div class="w3-note w3-panel">
+<p>If you don't know what a package is, read our <a href="java_packages.asp">Java Packages Tutorial</a>.</p>
+</div>
+
+<hr>
+<h2>Display Current Date</h2>
+<p>To display the current date, import the <code class="w3-codespan">java.time.LocalDate</code> class, and use its <code class="w3-codespan">now()</code> method:</p>
+
 <div class="w3-example">
 <h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-enum">enum</span> <span class="token class-name">Level</span> <span class="token punctuation">{</span>
-<span class="token constant">LOW</span><span class="token punctuation">,</span>
-<span class="token constant">MEDIUM</span><span class="token punctuation">,</span>
-<span class="token constant">HIGH</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>You can access <code class="w3-codespan">enum</code> constants with the <strong>dot</strong> syntax:</p>
-<div class="w3-code notranslate javaHigh"><span class="javacolor" style="color:black"><span class="javanumbercolor" style="color:red">
-</span>  Level myVar = Level.<span class="javapropertycolor" style="color:black">MEDIUM</span>; </span></div>
-</div>
-
-<div class="w3-note w3-panel">
-<p><strong>Enum</strong> is short for "enumerations", which means "specifically listed".</p>
-</div>
-<hr>
-
-<h2>Enum inside a Class</h2>
-
-<p>You can also have an <code class="w3-codespan">enum</code> inside a class:</p>
-
-<div class="w3-example">
-<h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-enum">enum</span> <span class="token class-name">Level</span> <span class="token punctuation">{</span>
-  <span class="token constant">LOW</span><span class="token punctuation">,</span>
-  <span class="token constant">MEDIUM</span><span class="token punctuation">,</span>
-  <span class="token constant">HIGH</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Level</span> myVar <span class="token operator">=</span> <span class="token class-name">Level</span><span class="token punctuation">.</span><span class="token constant">MEDIUM</span><span class="token punctuation">;</span> 
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>The output will be:</p>
-<div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
-<code>
-MEDIUM
-</code>
-</div>
-</div>
-<hr>
-
-<h2>Enum in a Switch Statement</h2>
-
-<p>Enums are often used in <code class="w3-codespan">switch</code> statements to check for corresponding values:</p>
-
-<div class="w3-example">
-<h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-enum">enum</span> <span class="token class-name">Level</span> <span class="token punctuation">{</span>
-<span class="token constant">LOW</span><span class="token punctuation">,</span>
-<span class="token constant">MEDIUM</span><span class="token punctuation">,</span>
-<span class="token constant">HIGH</span>
-<span class="token punctuation">}</span>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span></span><span class="token class-name">LocalDate</span></span><span class="token punctuation">;</span> <span class="token comment">// import the LocalDate class</span>
 
 <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Level</span> myVar <span class="token operator">=</span> <span class="token class-name">Level</span><span class="token punctuation">.</span><span class="token constant">MEDIUM</span><span class="token punctuation">;</span>
-
-  <span class="token keyword keyword-switch">switch</span><span class="token punctuation">(</span>myVar<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword keyword-case">case</span> <span class="token constant">LOW</span><span class="token operator">:</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Low level"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
-    <span class="token keyword keyword-case">case</span> <span class="token constant">MEDIUM</span><span class="token operator">:</span>
-       <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Medium level"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
-    <span class="token keyword keyword-case">case</span> <span class="token constant">HIGH</span><span class="token operator">:</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"High level"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LocalDate</span> myObj <span class="token operator">=</span> <span class="token class-name">LocalDate</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Create a date object</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myObj<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Display the current date</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>The output will be:</p>
 <div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
 <code>
-Medium level
+<script>
+var d = new Date();
+
+var m = d.getMonth() + 1;
+if (m < 10) m = "0" + m
+
+var day = d.getDate();
+if (day < 10) day = "0" + day;
+
+var x = d.getFullYear() + "-" + m + "-" + day;
+document.write(x);
+</script>2023-10-17
 </code>
 </div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryjava.asp?filename=demo_date_localdate">Try it Yourself »</a>
+</div>
+<hr>
+
+<h2>Display Current Time</h2>
+
+<p>To display the current time (hour, minute, second, and nanoseconds), import the <code class="w3-codespan">java.time.LocalTime</code> class, and use its <code class="w3-codespan">now()</code> method:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span></span><span class="token class-name">LocalTime</span></span><span class="token punctuation">;</span> <span class="token comment">// import the LocalTime class</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LocalTime</span> myObj <span class="token operator">=</span> <span class="token class-name">LocalTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The output will be:</p>
+<div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
+<code>
+<script>
+var d = new Date();
+
+var h = d.getHours();
+if (h < 10) h = "0" + h;
+
+var n = d.getMinutes();
+if (n < 10) n = "0" + n;
+
+var s = d.getSeconds();
+if (s < 10) s = "0" + s;
+
+var ms = d.getMilliseconds();
+while (ms.toString().length < 3) {
+  ms = "0" + ms;
+}
+var ex = Math.floor(Math.random() * 999);
+while (ex.toString().length < 3) {
+  ex = "0" + ex;
+}
+
+var x =h + ":" + n + ":" + s + "." + ms + ex
+document.write(x);
+</script>23:46:34.397657
+</code>
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryjava.asp?filename=demo_date_localtime">Try it Yourself »</a>
 </div>
 <hr>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
 <!-- MidContent -->
 <!-- <p class="adtext">Advertisement</p> -->
 
-
+  <div id="adngin-mid_content-0" data-google-query-id="COSuz67Y_YEDFWJHnQkdc4oKhA"><div id="sn_ad_label_adngin-mid_content-0" class="sn_ad_label" style="color:#000000;font-size:12px;margin:0;text-align:center;">ADVERTISEMENT</div><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="2"></iframe></div></div>
+  
 </div>
-<h2>Loop Through an Enum</h2>
+<hr>
 
-<p>The enum type has a <code class="w3-codespan">values()</code> method, which returns an array of all enum constants. This method is useful when you want to loop through the constants of an enum:</p>
+<h2>Display Current Date and Time</h2>
+
+<p>To display the current date and time, import the <code class="w3-codespan">java.time.LocalDateTime</code> class, and use its <code class="w3-codespan">now()</code> method:</p>
 
 <div class="w3-example">
 <h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">Level</span> myVar <span class="token operator">:</span> <span class="token class-name">Level</span><span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span></span><span class="token class-name">LocalDateTime</span></span><span class="token punctuation">;</span> <span class="token comment">// import the LocalDateTime class</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LocalDateTime</span> myObj <span class="token operator">=</span> <span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>The output will be:</p>
 <div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
 <code>
-LOW<br>
-MEDIUM<br>
-HIGH</code>
-</div>
-</div>
-<div class="w3-note w3-panel">
-<h4>Difference between Enums and Classes</h4>
-<p>An <code class="w3-codespan">enum</code> can, just like a <code class="w3-codespan">class</code>, have attributes and methods. The only 
-difference is that enum constants are <code class="w3-codespan">public</code>, <code class="w3-codespan">static</code> and <code class="w3-codespan">final</code> 
-(unchangeable - cannot be overridden).</p>
-<p>An <code class="w3-codespan">enum</code> cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).</p>
-<h4>Why And When To Use Enums?</h4>
+<script>
 
-<p>Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.</p></div>
+var d = new Date();
+
+var m = d.getMonth() + 1;
+if (m < 10) m = "0" + m
+
+var day = d.getDate();
+if (day < 10) day = "0" + day;
+
+var h = d.getHours();
+if (h < 10) h = "0" + h;
+
+var n = d.getMinutes();
+if (n < 10) n = "0" + n;
+
+var s = d.getSeconds();
+if (s < 10) s = "0" + s;
+
+var ms = d.getMilliseconds();
+while (ms.toString().length < 3) {
+  ms = "0" + ms;
+}
+var ex = Math.floor(Math.random() * 999);
+while (ex.toString().length < 3) {
+  ex = "0" + ex;
+}
+
+var x = d.getFullYear() + "-" + m + "-" + day + "T" + h + ":" + n + ":" + s + "." + ms + ex
+document.write(x);
+</script>2023-10-17T23:46:34.397669
+</code>
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryjava.asp?filename=demo_date_localdatetime">Try it Yourself »</a>
+</div>
+<hr>
+<h2>Formatting Date and Time</h2>
+<p>The "T" in the example above is used to separate the date from the time. You can use the <code class="w3-codespan">DateTimeFormatter</code> class 
+with the <code class="w3-codespan">ofPattern()</code> method in the same package to format or parse date-time objects. 
+The following example will remove both the "T" and nanoseconds from the date-time:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span></span><span class="token class-name">LocalDateTime</span></span><span class="token punctuation">;</span> <span class="token comment">// Import the LocalDateTime class</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>time<span class="token punctuation">.</span>format<span class="token punctuation">.</span></span><span class="token class-name">DateTimeFormatter</span></span><span class="token punctuation">;</span> <span class="token comment">// Import the DateTimeFormatter class</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LocalDateTime</span> myDateObj <span class="token operator">=</span> <span class="token class-name">LocalDateTime</span><span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Before formatting: "</span> <span class="token operator">+</span> myDateObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">DateTimeFormatter</span> myFormatObj <span class="token operator">=</span> <span class="token class-name">DateTimeFormatter</span><span class="token punctuation">.</span><span class="token function">ofPattern</span><span class="token punctuation">(</span><span class="token string">"dd-MM-yyyy HH:mm:ss"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">String</span> formattedDate <span class="token operator">=</span> myDateObj<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>myFormatObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"After formatting: "</span> <span class="token operator">+</span> formattedDate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>The output will be:</p>
+<div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
+<code>
+<script>
+
+var d = new Date();
+
+var m = d.getMonth() + 1;
+if (m < 10) m = "0" + m
+
+var day = d.getDate();
+if (day < 10) day = "0" + day;
+
+var h = d.getHours();
+if (h < 10) h = "0" + h;
+
+var n = d.getMinutes();
+if (n < 10) n = "0" + n;
+
+var s = d.getSeconds();
+if (s < 10) s = "0" + s;
+
+var ms = d.getMilliseconds();
+while (ms.toString().length < 3) {
+  ms = "0" + ms;
+}
+var ex = Math.floor(Math.random() * 999);
+while (ex.toString().length < 3) {
+  ex = "0" + ex;
+}
+
+var x = "Before Formatting:" + " " + d.getFullYear() + "-" + m + "-" + day + "T" + h + ":" + n + ":" + s + "." + ms + ex
+document.write(x);
+</script>Before Formatting: 2023-10-17T23:46:34.398403
+<br>
+<script>
+
+var d = new Date();
+
+var m = d.getMonth() + 1;
+if (m < 10) m = "0" + m
+
+var day = d.getDate();
+if (day < 10) day = "0" + day;
+
+var h = d.getHours();
+if (h < 10) h = "0" + h;
+
+var n = d.getMinutes();
+if (n < 10) n = "0" + n;
+
+var s = d.getSeconds();
+if (s < 10) s = "0" + s;
+
+var x = "After Formatting:" + " "  + day + "-" + m + "-" + d.getFullYear() + " " + h + ":" + n + ":" + s;
+document.write(x);
+</script>After Formatting: 17-10-2023 23:46:34
+</code>
+</div>
+<a target="_blank" class="w3-btn w3-margin-bottom" href="tryjava.asp?filename=demo_date_format">Try it Yourself »</a>
+</div>
+
+
+<p>The <code class="w3-codespan">ofPattern()</code> method accepts all sorts of values, if you want to display 
+the date and time in a different format. For example:</p>
+
+<div class="w3-responsive" style="margin:-16px 0;">
+<table class="ws-table-all notranslate">
+<tbody>
+<tr>
+<th style="width:25%">Value</th>
+<th style="width:65%">Example</th>
+<th style="width:10%">Tryit</th>
+</tr>
+<tr>
+<td><i>yyyy-MM-dd</i></td>
+<td>"1988-09-29"</td>
+<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_format">Try it »</a></td>
+</tr>
+<tr>
+<td><i>dd/MM/yyyy</i></td>
+<td>"29/09/1988"</td>
+<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_formatter1">Try it »</a></td>
+</tr>
+<tr>
+<td><i>dd-MMM-yyyy</i></td>
+<td>"29-Sep-1988"</td>
+<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_formatter2">Try it »</a></td>
+</tr>
+<tr>
+<td><i>E, MMM dd yyyy</i></td>
+<td>"Thu, Sep 29 1988"</td>
+<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="tryjava.asp?filename=demo_date_formatter3">Try it »</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
 
 <br>
 <div class="w3-clear nextprev w3-center">
-<a class="w3-left w3-btn" href="java_interface.asp">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_user_input.asp">Next ❯</a>
+<a class="w3-left w3-btn" href="java_user_input.asp">❮ Previous</a><a class="w3-btn w3-hide-small myl-nav-butt" href="https://www.w3schools.com/signup/?utm_source=classic&amp;utm_medium=java_tutorial&amp;utm_campaign=button_lower_navigation" title="Sign Up and improve Your Learning Experience" target="_blank">Log in to track progress</a>
+<a class="w3-right w3-btn" href="java_arraylist.asp">Next ❯</a>
 </div>
 <div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
-<a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
-  
-</a>
+  <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
+ 
+  </a>
 </div>
 
 </div>
