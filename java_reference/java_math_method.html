@@ -266,107 +266,228 @@
     }
 </style>
 
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 <div class="w3-col l10 m12" id="main">
     <div id="mainLeaderboard" style="overflow:hidden;">
       <!-- MainLeaderboard-->
 
       <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="COCegLCl5oEDFValZgId3CoMIA"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="2" data-load-complete="true"></iframe></div></div>
+      <div id="adngin-main_leaderboard-0" data-google-query-id="CJu7iN_CmIIDFcpMnQkd0UMB-A"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="2"></iframe></div></div>
       <!-- adspace leaderboard -->
 
     </div>
 
-<h1>Java <span class="color_h1">Polymorphism</span></h1>
+<h1>Java <span class="color_h1">Math Methods</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+    <a class="w3-left w3-btn" href="java_string_method.html">❮ Previous</a>
+    <a class="w3-right w3-btn" href="java_reference_data.html">Next ❯</a>
 </div>
 <hr>
+<p class="intro">The Java Math class has many methods that allows you to perform mathematical tasks on numbers.</p>
+<hr>
 
-<h2>Java Polymorphism</h2>
-<p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
-<p>Like we specified in the previous chapter; 
-<a href="java_inheritance.asp"><strong>Inheritance</strong></a> lets us 
-inherit attributes and methods from another class. <strong>Polymorphism</strong> 
-uses those methods to perform different tasks. This allows us to perform a single 
-action in different ways.</p>
-<p>For example, think of a superclass called <code class="w3-codespan">Animal</code> that has a method called <code class="w3-codespan">animalSound()</code>. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
-<!--<p>In the following example, we create an Animal class with an animalSound() 
-method. Then we create two subclasses of the Animal: Pig and Cat that inherit 
-from the Animal class. The subclasses also have their own implementation of the 
-animalSound() method:</p>-->
-<div class="w3-example">
-<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
 
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<h2>All Math Methods</h2>
+<p>A list of all Math methods can be found in the table below:</p>
+<div class="w3-responsive">
+<table class="ws-table-all notranslate" style="margin:0">
+<tbody><tr>
+  <th style="width:22%">Method</th>
+  <th style="width:57%">Description</th>
+  <th style="width:21%">Return Type</th>
+</tr>
+<tr>
+  <td><a href="ref_math_abs.asp">abs(x)</a></td>
+  <td>Returns the absolute value of x</td>
+  <td>double|float|int|long</td>
+</tr>
+<tr>
+  <td><a href="ref_math_acos.asp">acos(x)</a></td>
+  <td>Returns the arccosine of x, in radians</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>asin(x)</td>
+  <td>Returns the arcsine of x, in radians</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>atan(x)</td>
+  <td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>atan2(y,x)</td>
+  <td>Returns the angle theta from the conversion of rectangular coordinates (x, y) to polar coordinates (r, theta).</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>cbrt(x)</td>
+  <td>Returns the cube root of x</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>ceil(x)</td>
+  <td>Returns the value of x rounded up to its nearest integer</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>copySign(x, y)</td>
+  <td>Returns the first floating point x with the sign of the second floating point y</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>cos(x)</td>
+  <td>Returns the cosine of x (x is in radians)</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>cosh(x)</td>
+  <td>Returns the hyperbolic cosine of a double value</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>exp(x)</td>
+  <td>Returns the value of E<sup>x</sup></td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>expm1(x)</td>
+  <td>Returns e<sup>x</sup> -1</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>floor(x)</td>
+  <td>Returns the value of x rounded down to its nearest integer</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>getExponent(x)</td>
+  <td>Returns the unbiased exponent used in x</td>
+   <td>int</td>
+</tr>
+<tr>
+  <td>hypot(x, y)</td>
+  <td>Returns sqrt(x<sup>2</sup> +y<sup>2</sup>) without intermediate overflow or underflow</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>IEEEremainder(x, y)</td>
+  <td>Computes the remainder operation on x and y as prescribed by the IEEE 754 standard</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>log(x)</td>
+  <td>Returns the natural logarithm (base E) of x</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>log10(x)</td>
+ <td>Returns the base 10 logarithm of x</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>log1p(x)</td>
+  <td>Returns the natural logarithm (base E) of the sum of x and 1</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>max(x, y)</td>
+ <td>Returns the number with the highest value</td>
+    <td>double|float|int|long</td>
+</tr>
+<tr>
+  <td>min(x, y)</td>
+  <td>Returns the number with the lowest value</td>
+   <td>double|float|int|long</td>
+</tr>
+<tr>
+  <td>nextAfter(x, y)</td>
+  <td>Returns the floating point number adjacent to x in the direction of y</td>
+    <td>double|float</td>
+</tr>
+<tr>
+  <td>nextUp(x)</td>
+  <td>Returns the floating point value adjacent to x in the direction of positive infinity</td>
+    <td>double|float</td>
+</tr>
+<tr>
+  <td>pow(x, y)</td>
+  <td>Returns the value of x to the power of y</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>random()</td>
+ <td>Returns a random number between 0 and 1</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>round(x)</td>
+  <td>Returns the value of x rounded to its nearest integer</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td>rint(x)</td>
+ <td>Returns the double value that is closest to x and equal to a mathematical integer</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>signum(x)</td>
+ <td>Returns the sign of x</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>sin(x)</td>
+  <td>Returns the sine of x (x is in radians)</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>sinh(x)</td>
+ <td>Returns the hyperbolic sine of a double value</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>sqrt(x)</td>
+<td>Returns the square root of x</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>tan(x)</td>
+  <td>Returns the tangent of an angle</td>
+  <td>double</td>
+</tr>
+<tr>
+  <td>tanh(x)</td>
+  <td>Returns the hyperbolic tangent of a double value</td>
+   <td>double</td>
+</tr>
+<tr>
+  <td>toDegrees(x)</td>
+ <td>Converts an angle measured in radians to an approx. equivalent angle measured in degrees</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>toRadians(x)</td>
+ <td>Converts an angle measured in degrees to an approx. angle measured in radians</td>
+    <td>double</td>
+</tr>
+<tr>
+  <td>ulp(x)</td>
+ <td>Returns the size of the unit of least precision (ulp) of x</td>
+   <td>double|float</td>
+</tr>
+</tbody>
+</table>
 </div>
+<p><strong>Note:</strong> All Math methods are <code class="w3-codespan">static</code>.</p>
 
-<div class="w3-note w3-panel">
-<p>Remember from the <a href="java_inheritance.asp">Inheritance chapter</a> that we use the <code class="w3-codespan">extends</code> keyword to inherit from a class.</p>
-</div>
-
-<p>Now we can create <code class="w3-codespan">Pig</code> and <code class="w3-codespan">
-Dog</code> objects and call the <code class="w3-codespan">animalSound()</code> method on both of them:</p>
-<div class="w3-example">
-<h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Animal</span> myAnimal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Animal object</span>
-  <span class="token class-name">Animal</span> myPig <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Pig object</span>
-  <span class="token class-name">Animal</span> myDog <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Dog object</span>
-  myAnimal<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myDog<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>
-</p>
-</div>
-
-<div class="w3-note w3-panel">
-<h4>Why And When To Use "Inheritance" and "Polymorphism"?</h4>
-<p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
-</div>
 
 <br>
 <div class="w3-clear nextprev w3-center">
-    <a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-    <a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+<a class="w3-left w3-btn" href="java_string_method.html">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_reference_data.html">Next ❯</a>
 </div>
 <div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
 <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">

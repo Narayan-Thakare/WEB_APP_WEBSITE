@@ -266,107 +266,113 @@
     }
 </style>
 
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
 <div class="w3-col l10 m12" id="main">
     <div id="mainLeaderboard" style="overflow:hidden;">
       <!-- MainLeaderboard-->
 
       <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="COCegLCl5oEDFValZgId3CoMIA"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="2" data-load-complete="true"></iframe></div></div>
+      <div id="adngin-main_leaderboard-0" data-google-query-id="CLScvcS1mIIDFZOJcAod2TMKtw"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="3"></iframe></div></div>
       <!-- adspace leaderboard -->
 
     </div>
 
-<h1>Java <span class="color_h1">Polymorphism</span></h1>
+<h1>Java <span class="color_h1">Read Files</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+<a class="w3-left w3-btn" href="java_create_write_files.html">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_deleted_files.html">Next ❯</a>
 </div>
 <hr>
 
-<h2>Java Polymorphism</h2>
-<p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
-<p>Like we specified in the previous chapter; 
-<a href="java_inheritance.asp"><strong>Inheritance</strong></a> lets us 
-inherit attributes and methods from another class. <strong>Polymorphism</strong> 
-uses those methods to perform different tasks. This allows us to perform a single 
-action in different ways.</p>
-<p>For example, think of a superclass called <code class="w3-codespan">Animal</code> that has a method called <code class="w3-codespan">animalSound()</code>. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
-<!--<p>In the following example, we create an Animal class with an animalSound() 
-method. Then we create two subclasses of the Animal: Pig and Cat that inherit 
-from the Animal class. The subclasses also have their own implementation of the 
-animalSound() method:</p>-->
+<h2>Read a File</h2>
+<p>In the previous chapter, you learned how to create and write to a file.</p>
+<p>In the 
+following example, we use the <code class="w3-codespan">Scanner</code> class to read the contents of the text file we created in the previous chapter:</p>
 <div class="w3-example">
-<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="/java/java_server.asp" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">File</span></span><span class="token punctuation">;</span>  <span class="token comment">// Import the File class</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">FileNotFoundException</span></span><span class="token punctuation">;</span>  <span class="token comment">// Import this class to handle errors</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span> <span class="token comment">// Import the Scanner class to read text files</span>
 
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">ReadFile</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+    <span class="token class-name">File</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"filename.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Scanner</span> myReader <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>myObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>myReader<span class="token punctuation">.</span><span class="token function">hasNextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">String</span> data <span class="token operator">=</span> myReader<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    myReader<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">FileNotFoundException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"An error occurred."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<p>The output will be:</p>
+<div class="notranslate w3-black w3-padding">
+<code>
+Files in Java might be tricky, but it is fun enough!</code>
+</div>
+</div>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+
 </div>
 
-<div class="w3-note w3-panel">
-<p>Remember from the <a href="java_inheritance.asp">Inheritance chapter</a> that we use the <code class="w3-codespan">extends</code> keyword to inherit from a class.</p>
-</div>
-
-<p>Now we can create <code class="w3-codespan">Pig</code> and <code class="w3-codespan">
-Dog</code> objects and call the <code class="w3-codespan">animalSound()</code> method on both of them:</p>
+<h2>Get File Information</h2>
+<p>To get more information about a file, use any of the <code class="w3-codespan">File</code> methods:</p>
 <div class="w3-example">
 <h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">File</span></span><span class="token punctuation">;</span>  <span class="token comment">// Import the File class</span>
 
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Animal</span> myAnimal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Animal object</span>
-  <span class="token class-name">Animal</span> myPig <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Pig object</span>
-  <span class="token class-name">Animal</span> myDog <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Dog object</span>
-  myAnimal<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myDog<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">GetFileInfo</span> <span class="token punctuation">{</span> <br>  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">File</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"filename.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>myObj<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File name: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Absolute path: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Writeable: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">canWrite</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Readable "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">canRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File size in bytes "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The file does not exist."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>
-</p>
+<p>The output will be:</p>
+<div class="notranslate w3-black w3-padding">
+<code>
+File name: filename.txt<br>
+Absolute path: C:\Users\MyName\filename.txt<br>
+Writeable: true<br>
+Readable: true<br>
+File size in bytes: 0
+</code>
+</div>
 </div>
 
 <div class="w3-note w3-panel">
-<h4>Why And When To Use "Inheritance" and "Polymorphism"?</h4>
-<p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
+<p><strong>Note:</strong> There are many available classes in the Java API that can be used to read and write files in Java: <code class="w3-codespan">FileReader, BufferedReader, Files, Scanner, FileInputStream, FileWriter, BufferedWriter, FileOutputStream</code>, etc. Which one to use depends on the Java version you're working with and whether you need to read bytes or characters, and the size of the file/lines etc.</p>
+<p><strong>Tip:</strong> To delete a file, read our <a href="java_files_delete.asp">Java Delete Files</a> chapter.</p>
 </div>
+
 
 <br>
 <div class="w3-clear nextprev w3-center">
-    <a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-    <a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+    <a class="w3-left w3-btn" href="java_create_write_files.html">❮ Previous</a>
+    <a class="w3-right w3-btn" href="java_deleted_files.html">Next ❯</a>
 </div>
 <div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
 <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">

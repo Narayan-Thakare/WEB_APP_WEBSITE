@@ -266,149 +266,188 @@
     }
 </style>
 
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
 <div class="w3-col l10 m12" id="main">
     <div id="mainLeaderboard" style="overflow:hidden;">
       <!-- MainLeaderboard-->
 
       <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="CL_xv_GS-IEDFfSlZgIdxiQGdg"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="3" data-load-complete="true"></iframe></div></div>
+      <div id="adngin-main_leaderboard-0" data-google-query-id="CLbpkd2cmIIDFYhcnQkdREgBIw"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="3"></iframe></div></div>
       <!-- adspace leaderboard -->
 
     </div>
 
-<h1>Java <span class="color_h1">Interface</span></h1>
+<h1>Java <span class="color_h1">HashSet</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="java_abstraction.html">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_enums.html">Next ❯</a>
+    <a class="w3-left w3-btn" href="Java_hash_map.html">❮ Previous</a>
+    <a class="w3-right w3-btn" href="java_iterator.html">Next ❯</a>
 </div>
 <hr>
 
-<h2>Interfaces</h2>
-<p>Another way to achieve <a href="java_abstract.asp">abstraction</a> in Java, is with interfaces.</p>
-<p>An <code class="w3-codespan">interface</code> is a completely "<strong>abstract class</strong>" 
-that is used to group related methods with empty bodies:</p>
+<h2>Java HashSet</h2>
+<p>A HashSet is a collection of items where every item is unique, and it is found in the <code class="w3-codespan">java.util</code> 
+package:</p>
 
 <div class="w3-example">
-<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
-<pre class="w3-white language-java" data-line="2" tabindex="0"><code class="language-java"><span class="token comment">// interface</span>
-<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method (does not have a body)</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method (does not have a body)</span>
-<span class="token punctuation">}</span>
-<div aria-hidden="true" data-range="2" class=" line-highlight" data-start="2" style="top: 22.5px; width: 1028px;"> 
-</div></code></pre>
+<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="/java/java_server.asp" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
+<p>Create a <code class="w3-codespan">HashSet</code> object called <strong>cars</strong> that will store strings:</p>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashSet</span></span><span class="token punctuation">;</span> <span class="token comment">// Import the HashSet class</span>
+
+<span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> cars <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 </div>
 
-<p>To access the interface methods, the interface must be "implemented" 
-(kinda like inherited) by another class with the <code class="w3-codespan">implements</code> 
-keyword (instead of <code class="w3-codespan">extends</code>). The body of the 
-interface method is provided by the "implement" class:</p>
+<hr>
+
+<h2>Add Items</h2>
+<p>The <code class="w3-codespan">HashSet</code> class has many useful methods. For example, to 
+add items to it, use the <code class="w3-codespan">add()</code> method:</p>
 <div class="w3-example">
 <h3>Example</h3>
-<pre class="w3-white language-java" data-line="2,8" tabindex="0"><code class="language-java"><span class="token comment">// Interface</span>
-<span class="token keyword keyword-interface">interface</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method (does not have a body)</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method (does not have a body)</span>
-<span class="token punctuation">}</span>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token comment">// Import the HashSet class</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashSet</span></span><span class="token punctuation">;</span>
 
-<span class="token comment">// Pig "implements" the Animal interface</span>
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// The body of animalSound() is provided here</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// The body of sleep() is provided here</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Zzz"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
 <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Pig</span> myPig <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Pig object</span>
-  myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myPig<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> cars <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Volvo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"BMW"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Ford"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"BMW"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cars<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"Mazda"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>cars<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<div aria-hidden="true" data-range="2" class=" line-highlight" data-start="2" style="top: 22.5px; width: 1028px;"> 
-</div><div aria-hidden="true" data-range="8" class=" line-highlight" data-start="8" style="top: 157.5px; width: 1028px;"> 
-</div></code></pre>
-
+</code></pre>
+<p>
+</p>
 </div>
-<div class="w3-note w3-panel">
-<h4>Notes on Interfaces:</h4>
-<ul>
-<li>Like <strong>abstract classes</strong>, interfaces <strong>cannot</strong> be used to create objects (in the example above, 
-it is not possible to create an "Animal" object in the MyMainClass)</li>
-<li>Interface methods do not have a body - the 
-body is provided by the "implement" class</li>
-<li>On implementation of an interface, you must override all of its methods</li>
-<li>Interface methods are by default <code class="w3-codespan">abstract</code> and 
-<code class="w3-codespan">public</code></li>
-<li>Interface attributes are by default <code class="w3-codespan">public</code>, 
-<code class="w3-codespan">static</code> and <code class="w3-codespan">final</code></li>
-<li>An interface cannot contain a constructor (as it cannot be used to create objects)</li>
-</ul>
+<p><strong>Note:</strong> In the example above, even though BMW is added twice it only appears once in the set
+because every item in a set has to be unique.</p>
+<hr>
 
-<h4>Why And When To Use Interfaces?</h4>
-<p>1) To achieve security - hide certain details and only show the important 
-details of an object (interface).</p>
-<p>2) Java does not support "multiple inheritance" (a class can only inherit from one superclass). However, it can be achieved 
-with interfaces, because the class can <strong>implement</strong> multiple interfaces.
-<strong>Note:</strong> To implement multiple interfaces, separate them with a comma (see example below).</p>
+<h2>Check If an Item Exists</h2>
+<p>To check whether an item exists in a HashSet, use the <code class="w3-codespan">contains()</code> method:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java">cars<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"Mazda"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>
+</p>
+</div>
+<hr>
+
+<h2>Remove an Item</h2>
+
+<p>To remove an item, use the <code class="w3-codespan">remove()</code> method:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java">cars<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"Volvo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>
+</p>
+</div>
+
+<p>To remove all items, use the <code class="w3-codespan">clear()</code> method:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java">cars<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>
+</p>
 </div>
 <hr>
 <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
 <!-- MidContent -->
 <!-- <p class="adtext">Advertisement</p> -->
 
-<div id="adngin-mid_content-0" data-google-query-id="CL7xv_GS-IEDFfSlZgIdxiQGdg"><div id="sn_ad_label_adngin-mid_content-0" class="sn_ad_label" style="color:#000000;font-size:12px;margin:0;text-align:center;">ADVERTISEMENT</div><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0__container__" style="border: 0pt; width: 728px; height: 0px;"></div></div>
+<div id="adngin-mid_content-0" data-google-query-id="CLXpkd2cmIIDFYhcnQkdREgBIw"><div id="sn_ad_label_adngin-mid_content-0" class="sn_ad_label" style="color:#000000;font-size:12px;margin:0;text-align:center;">ADVERTISEMENT</div><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="2"></iframe></div></div>
 
 </div>
 <hr>
-<h2>Multiple Interfaces </h2>
-<p>To implement multiple interfaces, separate them with a comma:</p>
+
+<h2>HashSet Size</h2>
+<p>To find out how many items there are, use the <code class="w3-codespan">size</code> method:</p>
+
 <div class="w3-example">
 <h3>Example</h3>
-<pre class="w3-white language-java" data-line="9" tabindex="0"><code class="language-java"><span class="token keyword keyword-interface">interface</span> <span class="token class-name">FirstInterface</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-interface">interface</span> <span class="token class-name">SecondInterface</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myOtherMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">DemoClass</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">FirstInterface</span><span class="token punctuation">,</span> <span class="token class-name">SecondInterface</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Some text.."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myOtherMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Some other text..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">DemoClass</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">DemoClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myObj<span class="token punctuation">.</span><span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myObj<span class="token punctuation">.</span><span class="token function">myOtherMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<div aria-hidden="true" data-range="9" class=" line-highlight" data-start="9" style="top: 180px; width: 1028px;"> 
-</div></code></pre>
-
+<pre class="w3-white language-java" tabindex="0"><code class="language-java">cars<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>
+</p>
 </div>
+<hr>
+
+<h2>Loop Through a HashSet</h2>
+<p>Loop through the items of an <code class="w3-codespan">HashSet</code> with a <b>for-each</b> loop:</p>
+
+<div class="w3-example">
+<h3>Example</h3>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> i <span class="token operator">:</span> cars<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>
+</p>
+</div>
+<hr>
+
+<h2>Other Types</h2>
+<p>Items in an HashSet are actually objects. In the examples above, we created 
+items 
+(objects) of type "String". Remember that a String in Java is an object (not a primitive type). To use other types, such as int, you must specify an equivalent <a href="java_wrapper_classes.asp">wrapper class</a>: <code class="w3-codespan">Integer</code>. For other primitive types, 
+use: <code class="w3-codespan">Boolean</code> for boolean, <code class="w3-codespan">Character</code> for char, <code class="w3-codespan">Double</code> for double, 
+etc:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<p>Use a <code class="w3-codespan">HashSet</code> that stores <code class="w3-codespan">Integer</code> objects:</p>
+<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">HashSet</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// Create a HashSet object called numbers</span>
+  <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> numbers <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">HashSet</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Add values to the set</span>
+  numbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  numbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Show which numbers between 1 and 10 are in the set</span>
+  <span class="token keyword keyword-for">for</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">" was found in the set."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">" was not found in the set."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>
+</p>
+</div>
+<hr>
+
 
 <br>
 <div class="w3-clear nextprev w3-center">
-    <a class="w3-left w3-btn" href="java_abstraction.html">❮ Previous</a>
-    <a class="w3-right w3-btn" href="java_enums.html">Next ❯</a>
+<a class="w3-left w3-btn" href="Java_hash_map.html">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_iterator.html">Next ❯</a>
 </div>
 <div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
 <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
  
 
- 
+  
+  
 </a>
 </div>
 

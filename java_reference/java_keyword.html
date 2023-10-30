@@ -266,111 +266,260 @@
     }
 </style>
 
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 <div class="w3-col l10 m12" id="main">
     <div id="mainLeaderboard" style="overflow:hidden;">
       <!-- MainLeaderboard-->
 
       <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="COCegLCl5oEDFValZgId3CoMIA"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="2" data-load-complete="true"></iframe></div></div>
-      <!-- adspace leaderboard -->
-
+    
     </div>
 
-<h1>Java <span class="color_h1">Polymorphism</span></h1>
+<h1>Java <span class="color_h1">Keywords</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+<a class="w3-left w3-btn" href="java_reference_data.html">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_string_method.html">Next ❯</a>
 </div>
 <hr>
 
-<h2>Java Polymorphism</h2>
-<p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
-<p>Like we specified in the previous chapter; 
-<a href="java_inheritance.asp"><strong>Inheritance</strong></a> lets us 
-inherit attributes and methods from another class. <strong>Polymorphism</strong> 
-uses those methods to perform different tasks. This allows us to perform a single 
-action in different ways.</p>
-<p>For example, think of a superclass called <code class="w3-codespan">Animal</code> that has a method called <code class="w3-codespan">animalSound()</code>. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
-<!--<p>In the following example, we create an Animal class with an animalSound() 
-method. Then we create two subclasses of the Animal: Pig and Cat that inherit 
-from the Animal class. The subclasses also have their own implementation of the 
-animalSound() method:</p>-->
-<div class="w3-example">
-<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<h2>Java Reserved Keywords</h2>
+<p>Java has a set of keywords that are reserved words that cannot be used as 
+variables, methods, classes, or any other identifiers:</p>
 
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<table class="ws-table-all notranslate">
+<tbody><tr>
+<th style="width:20%">Keyword</th>
+<th>Description</th>
+</tr>
+<tr>
+  <td><a href="ref_keyword_abstract.asp">abstract</a></td>
+  <td>A non-access modifier. Used for classes and methods: An abstract class cannot be used to create objects (to access it, it must be inherited from another class). An abstract method can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from)</td>
+</tr>
+<tr>
+  <td>assert</td>
+  <td>For debugging</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_boolean.asp">boolean</a></td>
+  <td>A data type that can only store true and false values</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_break.asp">break</a></td>
+  <td>Breaks out of a loop or a switch block</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_byte.asp">byte</a></td>
+  <td>A data type that can store whole numbers from -128 and 127</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_case.asp">case</a></td>
+  <td>Marks a block of code in switch statements</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_catch.asp">catch</a></td>
+  <td>Catches exceptions generated by try statements</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_char.asp">char</a></td>
+  <td>A data type that is used to store a single character</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_class.asp">class</a></td>
+  <td>Defines a class</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_break.asp">continue</a></td>
+  <td>Continues to the next iteration of a loop</td>
+</tr>
+<tr>
+  <td>const</td>
+  <td>Defines a constant. <span class="deprecated">Not in use</span> - use <a href="ref_keyword_final.asp">final</a> instead</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_default.asp">default</a></td>
+  <td>Specifies the default block of code in a switch statement</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_do.asp">do</a></td>
+  <td>Used together with while to create a do-while loop</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_double.asp">double</a></td>
+  <td>A data type that can store whole numbers from 1.7e−308 to 1.7e+308</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_else.asp">else</a></td>
+  <td>Used in conditional statements</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_enum.asp">enum</a></td>
+  <td>Declares an enumerated (unchangeable) type</td>
+</tr>
+<tr>
+  <td>exports</td>
+  <td>Exports a package with a module. New in Java 9</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_extends.asp">extends</a></td>
+  <td>Extends a class (indicates that a class is inherited from another class)</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_final.asp">final</a></td>
+  <td>A non-access modifier used for classes, attributes and methods, which makes them non-changeable (impossible to inherit or override)</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_finally.asp">finally</a></td>
+  <td>Used with exceptions, a block of code that will be executed no matter if there is an exception or not</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_float.asp">float</a></td>
+  <td>A data type that can store whole numbers from 3.4e−038 to 3.4e+038</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_for.asp">for</a></td>
+  <td>Create a for loop</td>
+</tr>
+<tr>
+  <td>goto</td>
+  <td><span class="deprecated">Not in use, and has no function</span></td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_if.asp">if</a></td>
+  <td>Makes a conditional statement</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_implements.asp">implements</a></td>
+  <td>Implements an interface</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_import.asp">import</a></td>
+  <td>Used to import a package, class or interface</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_instanceof.asp">instanceof</a></td>
+  <td>Checks whether an object is an instance of a specific class or an interface</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_int.asp">int</a></td>
+  <td>A data type that can store whole numbers from -2147483648 to 2147483647</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_interface.asp">interface</a></td>
+  <td>Used to declare a special type of class that only contains abstract methods</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_long.asp">long</a></td>
+  <td>A data type that can store whole numbers from -9223372036854775808 to 9223372036854775808</td>
+</tr>
+<tr>
+  <td>module</td>
+  <td>Declares a module. New in Java 9</td>
+</tr>
+<tr>
+  <td>native</td>
+  <td>Specifies that a method is not implemented in the same Java source file (but in another language)</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_new.asp">new</a></td>
+  <td>Creates new objects</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_package.asp">package</a></td>
+  <td>Declares a package</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_private.asp">private</a></td>
+  <td>An access modifier used for attributes, methods and constructors, making them only accessible within the declared class</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_protected.asp">protected</a></td>
+  <td>An access modifier used for attributes, methods and constructors, making them accessible in the same package and subclasses</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_public.asp">public</a></td>
+  <td>An access modifier used for classes, attributes, methods and constructors, making them accessible by any other class</td>
+</tr>
+<tr>
+  <td>requires</td>
+  <td>Specifies required libraries inside a module. New in Java 9</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_return.asp">return</a></td>
+  <td>Finished the execution of a method, and can be used to return a value from a method</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_short.asp">short</a></td>
+  <td>A data type that can store whole numbers from -32768 to 32767</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_static.asp">static</a></td>
+  <td>A non-access modifier used for methods and attributes. Static methods/attributes can be accessed without creating an object of a class</td>
+</tr>
+<tr>
+  <td>strictfp</td>
+  <td>Restrict the precision and rounding of floating point calculations</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_super.asp">super</a></td>
+  <td>Refers to superclass (parent) objects</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_switch.asp">switch</a></td>
+  <td>Selects one of many code blocks to be executed</td>
+</tr>
+<tr>
+  <td>synchronized</td>
+  <td>A non-access modifier, which specifies that methods can only be accessed by one thread at a time</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_this.asp">this</a></td>
+  <td>Refers to the current object in a method or constructor</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_throw.asp">throw</a></td>
+  <td>Creates a custom error</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_throws.asp">throws</a></td>
+  <td>Indicates what exceptions may be thrown by a method</td>
+</tr>
+<tr>
+  <td>transient</td>
+  <td>A non-accesss modifier, which specifies that an attribute is not part of an object's persistent state</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_try.asp">try</a></td>
+  <td>Creates a try...catch statement</td>
+</tr>
+<tr>
+  <td>var</td>
+  <td>Declares a variable. New in Java 10</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_void.asp">void</a></td>
+  <td>Specifies that a method should not have a return value</td>
+</tr>
+<tr>
+  <td>volatile</td>
+  <td>Indicates that an attribute is not cached thread-locally, and is always read from the "main memory"</td>
+</tr>
+<tr>
+  <td><a href="ref_keyword_while.asp">while</a></td>
+  <td>Creates a while loop</td>
+</tr>
+</tbody></table>
 
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</div>
-
-<div class="w3-note w3-panel">
-<p>Remember from the <a href="java_inheritance.asp">Inheritance chapter</a> that we use the <code class="w3-codespan">extends</code> keyword to inherit from a class.</p>
-</div>
-
-<p>Now we can create <code class="w3-codespan">Pig</code> and <code class="w3-codespan">
-Dog</code> objects and call the <code class="w3-codespan">animalSound()</code> method on both of them:</p>
-<div class="w3-example">
-<h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Animal</span> myAnimal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Animal object</span>
-  <span class="token class-name">Animal</span> myPig <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Pig object</span>
-  <span class="token class-name">Animal</span> myDog <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Dog object</span>
-  myAnimal<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myDog<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>
-</p>
-</div>
-
-<div class="w3-note w3-panel">
-<h4>Why And When To Use "Inheritance" and "Polymorphism"?</h4>
-<p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
-</div>
-
+<p><strong>Note:</strong> <code class="w3-codespan">true</code>, <code class="w3-codespan">false</code>, and <code class="w3-codespan">null</code> are not keywords, but they are literals and reserved words that cannot be used as identifiers.</p>
 <br>
 <div class="w3-clear nextprev w3-center">
-    <a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-    <a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+  <a class="w3-left w3-btn" href="java_reference_data.html">❮ Previous</a>
+  <a class="w3-right w3-btn" href="java_string_method.html">Next ❯</a>
 </div>
 <div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
 <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
-  
+ 
 </a>
 </div>
 

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Asterisc</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <!-- <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div> -->
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-secondary navbar-dark">
+                <a href="/index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Asterisc</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <!-- <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jhon Doe</h6>
+                        <span>Admin</span>
+                    </div> -->
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="/index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Home</a>
+                    <div class="nav-item dropdown">
+                       
+
+                                            <!-- <a href="chart.html" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Elements</a> -->
+
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">Buttons</a>
+                            <a href="typography.html" class="dropdown-item">Typography</a>
+                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                        </div>
+                    </div>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+
+                    <!-- <a href="chart.html" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Elements</a>
+                    <div class="nav-item dropdown"> -->
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signin.html" class="dropdown-item">Sign In</a>
+                            <a href="signup.html" class="dropdown-item">Sign Up</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-user-edit"></i></h2>
+                </a>
+                 <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- <form class="d-none d-md-flex ms-4">
+                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+                </form> -->
+                <!-- <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notificatin</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New user added</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Password changed</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">John Doe</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div> -->
+            </nav>
+            <!-- Navbar End -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Set the background to black */
+        color: #fff; /* Set text color to white */
+    }
+
+    #main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #111; /* Set content background color to dark gray */
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Add a subtle shadow */
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #007bff; /* Blue color */
+    }
+
+    .color_h1 {
+        color: #ff6600; /* Orange color */
+    }
+
+    hr {
+        border: 1px solid #333; /* Dark gray border for HR */
+        margin: 20px 0; /* Add margin to the HR */
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #fff; /* White text color for headings */
+    }
+
+    p {
+        font-size: 18px;
+        color: #ddd; /* Light gray text color for paragraphs */
+        text-align: left; /* Align paragraphs to the left */
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        text-align: left; /* Align lists to the left */
+    }
+
+    li {
+        font-size: 18px;
+        color: #ddd; /* Light gray text color for list items */
+        text-align: left; /* Align list items to the left */
+    }
+
+    .w3-clear {
+        clear: both;
+    }
+
+    .nextprev {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .w3-btn {
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .w3-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+<div class="w3-col l10 m12" id="main">
+    <div id="mainLeaderboard" style="overflow:hidden;">
+      <!-- MainLeaderboard-->
+
+      <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+      <div id="adngin-main_leaderboard-0" data-google-query-id="CNyQsNDGmIIDFa5FnQkdqZQK1Q"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="3"></iframe></div></div>
+      <!-- adspace leaderboard -->
+
+    </div>
+
+<h1>Java <span class="color_h1">Examples</span></h1>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="java_ref_math.asp">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_compiler.asp">Next ❯</a>
+</div>
+<hr>
+
+<h2>Java Syntax</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_helloworld">
+Create a simple "Hello World" program</a>
+</div>
+<a href="java_syntax.asp" class="ws-btn w3-margin-top">Syntax Explained</a>
+<hr>
+
+<h2>Java Comments</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_single_comment">
+Single-line comment before a line of code</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_single_comment_end">
+Single-line comment at the end of a line of code</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_multi_comment">
+Multi-line comment</a>
+</div>
+<a href="java_comments.asp" class="ws-btn w3-margin-top">Comments Explained</a>
+<hr>
+
+<h2>Java Variables</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_variables">
+Create a string variable</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables_int">
+Create an integer variable</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables_int2">
+Create a variable without assigning the value, and assign the value later</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables_ow">
+Overwrite an existing variable value</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables_final">
+Create a final variable (unchangeable and read-only)</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables2">
+Combine text and a variable on display</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables3">
+Add a variable to another variable</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_variables5">
+Declare many variables of the same type with a comma-separated list</a>
+</div>
+<a href="java_variables.asp" class="ws-btn w3-margin-top">Variables Explained</a>
+<hr>
+
+<h2>Java Data Types</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_data_types">
+A demonstration of different data types in Java</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_byte">
+Create a byte type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_short">
+Create a short type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_int">
+Create an int type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_long">
+Create a long type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_float">
+Create a float type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_double">
+Create a double type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_booleans">
+Create a boolean type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_char">
+Create a char type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_type_string">
+Create a String type</a>
+</div>
+<a href="java_data_types.asp" class="ws-btn w3-margin-top">Data Types Explained</a>
+<hr>
+
+<h2>Java Type Casting</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_casting_wide">
+Widening Casting</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_casting_narrow">
+Narrowing Casting</a>
+</div>
+<a href="java_type_casting.asp" class="ws-btn w3-margin-top">Type Casting Explained</a>
+<hr>
+
+<h2>Java Operators</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_oper_add">
+Addition operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_sub">
+Subtraction operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_mult">
+Multiplication operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_div">
+Division operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_mod">
+Modulus operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_inc">
+Increment operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_dec">
+Decrement operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_ass1">
+Assignment operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_compare1">
+Comparison operator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_oper_logical1">
+Logical operator</a>
+</div>
+<a href="java_operators.asp" class="ws-btn w3-margin-top">Operators Explained</a>
+<hr>
+
+<h2>Java Strings</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_strings">
+Create a string</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_strings_quotes">
+Quotes inside a string</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_strings_length">
+Find the length of a string</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_strings_touppercase">
+Using methods to convert strings to uppercase and lowercase</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_strings_indexof">
+Finding a string in a string</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_strings_conc">
+String concatenation</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_strings_num3">
+If you add a number and a string, the result will be a string concatenation</a>
+</div>
+<a href="java_strings.asp" class="ws-btn w3-margin-top">Strings Explained</a>
+<hr>
+
+<h2>Java Math</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_math_max">
+Math.max(x,y) - return the highest value of x and y</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_math_min">
+Math.min(x,y) - return the lowest value of x and y</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_math_sqrt">
+Math.sqrt(x) - return the square root of x</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_math_abs">
+Math.abs(x) - return the absolute (positive) value of x</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_math_random">
+Math.random() - return a random number between 0 and 1</a>
+</div>
+<a href="java_math.asp" class="ws-btn w3-margin-top">Math Explained</a>
+<hr>
+
+<h2>Java Booleans</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_booleans">
+Create a boolean type</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_booleans1">
+Find out if an expression is true or false</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_booleans3">
+Use the "equal to" operator to evaluate a boolean expression</a>
+</div>
+<a href="java_booleans.asp" class="ws-btn w3-margin-top">Booleans Explained</a>
+<hr>
+<div id="midcontentadcontainer" style="overflow:auto;text-align:center">
+<!-- MidContent -->
+<!-- <p class="adtext">Advertisement</p> -->
+
+<div id="adngin-mid_content-0" data-google-query-id="CNuQsNDGmIIDFa5FnQkdqZQK1Q"><div id="sn_ad_label_adngin-mid_content-0" class="sn_ad_label" style="color:#000000;font-size:12px;margin:0;text-align:center;">ADVERTISEMENT</div><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//mid_content_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div></div>
+
+</div>
+<hr>
+
+<h2>Java If...Else (Conditions)</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_if">
+The if statement</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_if_else">
+The else statement</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_if_else_if">
+The else if statement</a>
+</div>
+<a href="java_conditions.asp" class="ws-btn w3-margin-top">If...Else Explained</a>
+<hr>
+
+<h2>Java Switch</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_switch">
+The switch statement</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_switch_default">
+The switch statement with a default keyword</a>
+</div>
+<a href="java_switch.asp" class="ws-btn w3-margin-top">Switch Explained</a>
+<hr>
+
+<h2>Java Loops</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_while_loop">
+While loop</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_do_while_loop">
+Do while loop</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_for_loop">
+For loop</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_for_each">
+For-each loop</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_break">
+Break a loop</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_continue">
+Continue a loop</a>
+</div>
+<a href="java_while_loop.asp" class="ws-btn w3-margin-top">Loops Explained</a>
+<hr>
+
+<h2>Java Arrays</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_array">
+Create and access an array</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_change">
+Change an array element</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_length">
+Find the length of an array</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_change">
+Access an array</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_loop">
+Loop through an array</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_for_each">
+Loop through an array with for-each</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_multi">
+Multidimensional array</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_array_multi_for">
+Loop through a multidimensional array</a>
+</div>
+<a href="java_arrays.asp" class="ws-btn w3-margin-top">Arrays Explained</a>
+<hr>
+
+<h2>Java Methods</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_method">
+Create and call a method</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_method_multiple">
+Call a method multiple times</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_method_param">
+Method with parameters</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_method_param2">
+Method with multiple parameters</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_method_void">
+Return value</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_method_ifelse">
+A method with if...else</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_method_overloading2">
+Method overloading</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_recursion">
+Recursion</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_recursion2">
+Recursive function with a halting condition</a>
+</div>
+<a href="java_methods.asp" class="ws-btn w3-margin-top">Methods Explained</a>
+<hr>
+
+<h2>Java Classes and Objects</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_class">
+Create a class and an object of a class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_multi_obj">
+Create multiple objects of a class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_attributes">
+Accessing class attributes (variables)</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_attributes2">
+Modify attributes</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_attributes3">
+Override existing attribute values</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_attributes_multiple">
+Multiple attributes</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_method">
+Create a class method</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_method_para">
+Method with parameters</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_car">
+Access class methods with an object</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_constructor">
+Create a class constructor</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_constructor_para2">
+Constructor with parameters</a>
+</div>
+<a href="java_classes.asp" class="ws-btn w3-margin-top">Classes and Objects Explained</a>
+<hr>
+
+<h2>Java Modifiers</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_mod_public">
+Public class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_mod_default">
+Default class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava_classes.asp?filename=demo_mod_public2">
+Public attributes</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_access_mod">
+Private attributes</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_mod_default2">
+Default attributes</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_mod_protected">
+Protected attributes</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_mod_final">
+Final class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava_classes.asp?filename=demo_mod_abstract">
+Abstract class with abstract methods</a>
+</div>
+<a href="java_modifiers.asp" class="ws-btn w3-margin-top">Modifiers Explained</a>
+<hr>
+
+<h2>Java Encapsulation</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="showjava_classes.asp?filename=demo_getset">
+Java encapsulation (getters and setters)</a>
+</div>
+<a href="java_encapsulation.asp" class="ws-btn w3-margin-top">Encapsulation Explained</a>
+<hr>
+
+<h2>Java Packages</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="showjava.asp?filename=demo_api_scanner">
+Import a class from the Java API</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava.asp?filename=demo_api_scanner_package">
+Import a package from the Java API</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava.asp?filename=demo_package">
+Create a package</a>
+</div>
+<a href="java_packages.asp" class="ws-btn w3-margin-top">Packages Explained</a>
+<hr>
+
+<h2>Java Inheritance</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_inherit">
+Java inheritance (extends)</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_polymorphism">
+Java polymorphism</a>
+</div>
+<a href="java_inheritance.asp" class="ws-btn w3-margin-top">Inheritance Explained</a>
+<hr>
+
+<h2>Java Inner Classes</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_class_inner">
+Inner class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_inner2">
+Private inner class (error when trying to access it from an outside class)</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_inner3">
+Static inner class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_class_inner_access">
+Access outer class from inner class</a>
+</div>
+<a href="java_inner_classes.asp" class="ws-btn w3-margin-top">Inner Classes Explained</a>
+<hr>
+
+<h2>Java Abstraction &amp; Interfaces</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_abstract">
+Java abstract classes and methods</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_interface">
+Java interface (implements)</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_interface_multi">
+Multiple interfaces</a>
+</div>
+<a href="java_interface.asp" class="ws-btn w3-margin-top">Interfaces Explained</a>
+<hr>
+
+<h2>Java Enums</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_enums">
+Create an enum with a group of constants</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_enums_class">
+An enum inside a class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_enums_switch">
+An enum in a switch statement</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_enums_loop">
+Loop through an enum</a>
+</div>
+<a href="java_enums.asp" class="ws-btn w3-margin-top">Enums Explained</a>
+<hr>
+
+<h2>Java User Input</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="showjava.asp?filename=demo_api_scanner">
+Read user input</a>
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="showjava.asp?filename=demo_api_scanner2">
+Read user input of various types</a>
+</div>
+<a href="java_user_input.asp" class="ws-btn w3-margin-top">User Input Explained</a>
+<hr>
+
+<h2>Java Dates</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_date_localdate">
+Display current date</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_date_localtime">
+Display current time</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_date_localdatetime">
+Display current date and time</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_date_format">
+Formatting date and time</a>
+</div>
+<a href="java_date.asp" class="ws-btn w3-margin-top">Dates Explained</a>
+<hr>
+
+<h2>Java ArrayList</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_arraylist_add">
+Create an ArrayList</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_get">
+Access an item in an ArrayList</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_remove">
+Remove an item from an ArrayList</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_clear">
+Remove all items from an ArrayList</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_size">
+Get the size of an ArrayList</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_loop">
+Loop through an ArrayList</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_for_each">
+Loop through an ArrayList with for-each</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_arraylist_integer">
+Create an ArrayList that should store numbers (integers)</a>
+</div>
+<a href="java_arraylist.asp" class="ws-btn w3-margin-top">ArrayList Explained</a>
+<hr>
+
+<h2>Java HashMap</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_hashmap_put">
+Create a HashMap</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashmap_get">
+Access an item in a HashMap</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashmap_remove">
+Remove an item from a HashMap</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashmap_clear">
+Remove all items from a HashMap</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashmap_size">
+Get the size of a HashMap</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashmap_loop_keyvalue">
+Loop through a HashMap</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashmap_integer">
+Create a HashMap that should store String keys and Integer values</a>
+</div>
+<a href="java_hashmap.asp" class="ws-btn w3-margin-top">HashMap Explained</a>
+<hr>
+
+<h2>Java HashSet</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_hashset_add">
+Create a HashSet and add items to it</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashset_contains">
+Check if an item exists in a HashSet</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashset_remove">
+Remove an item from a HashSet</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashset_clear">
+Remove all items from a HashSet</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashset_size">
+Get the size of a HashSet</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashset_for_each">
+Loop through a HashSet</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_hashset_integer">
+Create a HashSet that should store Integer values</a>
+</div>
+<a href="java_hashset.asp" class="ws-btn w3-margin-top">HashSet Explained</a>
+<hr>
+
+<h2>Java Iterator</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_iterator">
+Getting an iterator</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_iterator_loop">
+Looping throug a collection</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_iterator_remove">
+Removing items from a collection</a>
+</div>
+<a href="java_iterator.asp" class="ws-btn w3-margin-top">Iterator Explained</a>
+<hr>
+
+<h2>Java Wrapper Classes</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_arraylist_integer">
+Create an ArrayList that should store numbers (integers)</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_wrapper_create">
+Create wrapper objects</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_wrapper_methods">
+Using wrapper methods</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_wrapper_string">
+Convert wrapper objects to strings</a>
+</div>
+<a href="java_wrapper_classes.asp" class="ws-btn w3-margin-top">Wrapper Classes Explained</a>
+<hr>
+
+<h2>Java Exceptions (Try...Catch)</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_try_catch">
+The try...catch statement</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_try_catch_finally">
+The finally statement</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_throw">
+The throw statement</a>
+</div>
+<a href="java_try_catch.asp" class="ws-btn w3-margin-top">Exceptions Explained</a>
+<hr>
+
+<h2>Java Regular Expressions</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_regex">
+Search for the word "w3schools" in a sentence</a>
+</div>
+<a href="java_regex.asp" class="ws-btn w3-margin-top">Regular Expressions Explained</a>
+<hr>
+
+<h2>Java Threads</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="tryjava.asp?filename=demo_threads">
+Running a thread by extending the thread class</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_threads_runnable">
+Running a thread by implementing the Runnable interface</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_threads_concurrency">
+Concurrency problems</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="tryjava.asp?filename=demo_threads_concurrency2">
+Avoid concurrency problems</a>
+</div>
+<a href="java_threads.asp" class="ws-btn w3-margin-top">Threads Explained</a>
+<hr>
+
+<h2>Java Files</h2>
+<div class="w3-bar-block">
+<a class="w3-button w3-bar-item ws-grey" target="_blank" href="showjava.asp?filename=demo_files_create">
+Create a file</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava.asp?filename=demo_files_write">
+Write to a file</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava.asp?filename=demo_files_read">
+Read a file</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava.asp?filename=demo_files_get">
+Get file information</a>
+<a class="w3-button w3-bar-item ws-grey w3-border-top" target="_blank" href="showjava.asp?filename=demo_files_delete">
+Delete a file</a>
+</div>
+<a href="java_files.asp" class="ws-btn w3-margin-top">Files Explained</a>
+<hr>
+
+
+<br>
+<div class="w3-clear nextprev w3-center">
+<a class="w3-left w3-btn" href="java_ref_math.asp">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_compiler.asp">Next ❯</a>
+</div>
+<div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
+<a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
+ 
+</a>
+</div>
+
+</div>
+<!-- ///////////////////////////////////////////// -->
+
+            <!-- Chart Start -->
+          
+            </div>
+            <!-- Chart End -->
+
+
+            <!-- Footer Start -->
+            
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/chart/chart.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

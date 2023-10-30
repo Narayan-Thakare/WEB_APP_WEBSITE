@@ -266,111 +266,237 @@
     }
 </style>
 
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 <div class="w3-col l10 m12" id="main">
     <div id="mainLeaderboard" style="overflow:hidden;">
       <!-- MainLeaderboard-->
 
       <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
-      <div id="adngin-main_leaderboard-0" data-google-query-id="COCegLCl5oEDFValZgId3CoMIA"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt;"><iframe id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" name="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="2" data-load-complete="true"></iframe></div></div>
+      <div id="adngin-main_leaderboard-0" data-google-query-id="COvqrdbBmIIDFS1QnQkdHTcEng"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div></div>
       <!-- adspace leaderboard -->
 
     </div>
 
-<h1>Java <span class="color_h1">Polymorphism</span></h1>
+<h1>Java <span class="color_h1">String Methods</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-<a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+<a class="w3-left w3-btn" href="java_keyword.html">❮ Previous</a>
+<a class="w3-right w3-btn" href="java_math_method.html">Next ❯</a>
 </div>
 <hr>
 
-<h2>Java Polymorphism</h2>
-<p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
-<p>Like we specified in the previous chapter; 
-<a href="java_inheritance.asp"><strong>Inheritance</strong></a> lets us 
-inherit attributes and methods from another class. <strong>Polymorphism</strong> 
-uses those methods to perform different tasks. This allows us to perform a single 
-action in different ways.</p>
-<p>For example, think of a superclass called <code class="w3-codespan">Animal</code> that has a method called <code class="w3-codespan">animalSound()</code>. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
-<!--<p>In the following example, we create an Animal class with an animalSound() 
-method. Then we create two subclasses of the Animal: Pig and Cat that inherit 
-from the Animal class. The subclasses also have their own implementation of the 
-animalSound() method:</p>-->
-<div class="w3-example">
-<h3>Example<a class="ws-black ws-hover-black spaces-tryit ga-featured" href="https://www.w3schools.com/spaces/" title="W3Schools Spaces" target="_blank">Get your own Java Server</a></h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-</div>
-
-<div class="w3-note w3-panel">
-<p>Remember from the <a href="java_inheritance.asp">Inheritance chapter</a> that we use the <code class="w3-codespan">extends</code> keyword to inherit from a class.</p>
-</div>
-
-<p>Now we can create <code class="w3-codespan">Pig</code> and <code class="w3-codespan">
-Dog</code> objects and call the <code class="w3-codespan">animalSound()</code> method on both of them:</p>
-<div class="w3-example">
-<h3>Example</h3>
-<pre class="w3-white language-java" tabindex="0"><code class="language-java"><span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Pig</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Dog</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Animal</span> myAnimal <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Animal object</span>
-  <span class="token class-name">Animal</span> myPig <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Pig object</span>
-  <span class="token class-name">Animal</span> myDog <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Create a Dog object</span>
-  myAnimal<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  myDog<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>
-</p>
-</div>
-
-<div class="w3-note w3-panel">
-<h4>Why And When To Use "Inheritance" and "Polymorphism"?</h4>
-<p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
-</div>
+<h2>All String Methods</h2>
+<p>The String class has a set of built-in methods that you can use on strings.</p>
+<table class="ws-table-all notranslate" style="margin:0">
+<tbody><tr>
+  <th style="width:22%">Method</th>
+  <th style="width:62%">Description</th>
+  <th style="width:16%">Return Type</th>
+</tr>
+<tr>
+  <td><a href="ref_string_charat.asp">charAt()</a></td>
+  <td>Returns the character at the specified index (position)</td>
+  <td>char</td>
+</tr>
+<tr>
+  <td><a href="ref_string_codepointat.asp">codePointAt()</a></td>
+  <td>Returns the Unicode of the character at the specified index</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_codepointbefore.asp">codePointBefore()</a></td>
+  <td>Returns the Unicode of the character before the specified index</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_codepointcount.asp">codePointCount()</a></td>
+  <td>Returns the number of Unicode values found in a string.</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_compareto.asp">compareTo()</a></td>
+  <td>Compares two strings lexicographically</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_comparetoignorecase.asp">compareToIgnoreCase()</a></td>
+  <td>Compares two strings lexicographically, ignoring case differences</td>
+   <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_concat.asp">concat()</a></td>
+  <td>Appends a string to the end of another string</td>
+  <td>String</td>
+</tr>
+<tr>
+  <td><a href="ref_string_contains.asp">contains()</a></td>
+  <td>Checks whether a string contains a sequence of characters</td>
+  <td>boolean</td>
+</tr>
+<tr>
+  <td><a href="ref_string_contentequals.asp">contentEquals()</a></td>
+  <td>Checks whether a string contains the exact same sequence of characters 
+  of the specified CharSequence or StringBuffer</td>
+  <td>boolean</td>
+</tr>
+<tr>
+  <td><a href="ref_string_copyvalueof.asp">copyValueOf()</a></td>
+  <td>Returns a String that represents the characters of the character array</td>
+   <td>String</td>
+</tr>
+<tr>
+  <td><a href="ref_string_endswith.asp">endsWith()</a></td>
+  <td>Checks whether a string ends with the specified character(s)</td>
+   <td>boolean</td>
+</tr>
+<tr>
+  <td><a href="ref_string_equals.asp">equals()</a></td>
+  <td>Compares two strings. Returns true if the strings are equal, and false 
+  if not</td>
+  <td>boolean</td>
+</tr>
+<tr>
+  <td><a href="ref_string_equalsignorecase.asp">equalsIgnoreCase()</a></td>
+  <td>Compares two strings, ignoring case considerations</td>
+   <td>boolean</td>
+</tr>
+<tr>
+  <td>format()</td>
+  <td>Returns a formatted string using the specified locale, format string, and arguments</td>
+   <td>String</td>
+</tr>
+<tr>
+  <td>getBytes()</td>
+  <td>Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array</td>
+   <td>byte[]</td>
+</tr>
+<tr>
+  <td>getChars()</td>
+  <td>Copies characters from a string to an array of chars</td>
+   <td>void</td>
+</tr>
+<tr>
+  <td><a href="ref_string_hashcode.asp">hashCode()</a></td>
+  <td>Returns the hash code of a string</td>
+    <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_indexof.asp">indexOf()</a></td>
+ <td>Returns the position of the first found occurrence of specified characters in a string</td>
+    <td>int</td>
+</tr>
+<tr>
+  <td>intern()</td>
+  <td>Returns the canonical representation for the string object</td>
+   <td>String</td>
+</tr>
+<tr>
+  <td><a href="ref_string_isempty.asp">isEmpty()</a></td>
+ <td>Checks whether a string is empty or not</td>
+    <td>boolean</td>
+</tr>
+<tr>
+  <td><a href="ref_string_lastindexof.asp">lastIndexOf()</a></td>
+  <td>Returns the position of the last found occurrence of specified characters in a string</td>
+   <td>int</td>
+</tr>
+<tr>
+  <td><a href="ref_string_length.asp">length()</a></td>
+  <td>Returns the length of a specified string</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td>matches()</td>
+  <td>Searches a string for a match against a regular expression, and returns the matches</td>
+  <td>boolean</td>
+</tr>
+<tr>
+  <td>offsetByCodePoints()</td>
+  <td>Returns the index within this String that is offset from the given index by codePointOffset code points</td>
+  <td>int</td>
+</tr>
+<tr>
+  <td>regionMatches()</td>
+ <td>Tests if two string regions are equal</td>
+   <td>boolean</td>
+</tr>
+<tr>
+  <td><a href="ref_string_replace.asp">replace()</a></td>
+  <td>Searches a string for a specified value, and returns a new string where the specified values are replaced</td>
+  <td>String</td>
+</tr>
+<tr>
+  <td>replaceFirst()</td>
+ <td>Replaces the first occurrence of a substring that matches the given regular expression with the given replacement</td>
+  <td>String</td>
+</tr>
+<tr>
+  <td>replaceAll()</td>
+ <td>Replaces each substring of this string that matches the given regular expression with the given replacement</td>
+  <td>String</td>
+</tr>
+<tr>
+  <td>split()</td>
+ <td>Splits a string into an array of substrings</td>
+  <td>String[]</td>
+</tr>
+<tr>
+  <td><a href="ref_string_startswith.asp">startsWith()</a></td>
+  <td>Checks whether a string starts with specified characters</td>
+  <td>boolean</td>
+</tr>
+<tr>
+  <td>subSequence()</td>
+ <td>Returns a new character sequence that is a subsequence of this sequence</td>
+  <td>CharSequence</td>
+</tr>
+<tr>
+  <td>substring()</td>
+<td>Returns a new string which is the substring of a specified string</td>
+  <td>String</td>
+</tr>
+<tr>
+  <td>toCharArray()</td>
+  <td>Converts this string to a new character array</td>
+  <td>char[]</td>
+</tr>
+<tr>
+  <td><a href="ref_string_tolowercase.asp">toLowerCase()</a></td>
+  <td>Converts a string to lower case letters</td>
+   <td>String</td>
+</tr>
+<tr>
+  <td>toString()</td>
+ <td>Returns the value of a String object</td>
+    <td>String</td>
+</tr>
+<tr>
+  <td><a href="ref_string_touppercase.asp">toUpperCase()</a></td>
+ <td>Converts a string to upper case letters</td>
+    <td>String</td>
+</tr>
+<tr>
+  <td><a href="ref_string_trim.asp">trim()</a></td>
+  <td>Removes whitespace from both ends of a string</td>
+  <td>String</td>
+</tr>
+<tr>
+  <td>valueOf()</td>
+  <td>Returns the string representation of the specified value</td>
+  <td>String</td>
+</tr>
+</tbody>
+</table>
 
 <br>
 <div class="w3-clear nextprev w3-center">
-    <a class="w3-left w3-btn" href="java_inheritanch.html">❮ Previous</a>
-    <a class="w3-right w3-btn" href="java_inner_classes.html">Next ❯</a>
+  <a class="w3-left w3-btn" href="java_keyword.html">❮ Previous</a>
+  <a class="w3-right w3-btn" href="java_math_method.html">Next ❯</a>
 </div>
 <div id="user-profile-bottom-wrapper" class="user-authenticated user-profile-bottom-wrapper w3-hide">
 <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com" class="user-profile-btn ga-bottom ga-bottom-profile" title="Your W3Schools Profile" aria-label="Your W3Schools Profile" target="_top">
-  
+ 
 </a>
 </div>
 
